@@ -1,5 +1,9 @@
 # Discord Provider for OAuth 2.0 Client
 
+[![Latest Version](https://img.shields.io/github/release/teampanfu/oauth2-discord.svg?style=flat-square)](https://github.com/teampanfu/oauth2-discord/releases)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Total Downloads](https://img.shields.io/packagist/dt/teampanfu/oauth2-discord.svg?style=flat-square)](https://packagist.org/packages/teampanfu/oauth2-discord)
+
 This package provides Discord OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
 
 ## Requirements
