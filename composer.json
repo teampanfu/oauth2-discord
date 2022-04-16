@@ -1,0 +1,33 @@
+{
+    "name": "teampanfu/oauth2-discord",
+    "description": "Discord OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+    "keywords": ["authentication", "authorization", "client", "discord", "oauth", "oauth2"],
+    "homepage": "https://github.com/teampanfu/oauth2-discord",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robin",
+            "email": "robin@panfu.us"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "league/oauth2-client": "^2.0"
+    },
+    "require-dev": {
+        "ext-json": "*",
+        "phpunit/phpunit": "^9.5",
+        "mockery/mockery": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Panfu\\OAuth2\\Client\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Panfu\\OAuth2\\Client\\Test\\": "tests/src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
