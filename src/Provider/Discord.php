@@ -28,10 +28,6 @@ class Discord extends AbstractProvider
         return $this->apiDomain.'/oauth2/authorize';
     }
 
-    public function getData($token) {
-        return $this->fetchResourceOwnerDetails($token);
-    }
-
     /**
      * {@inheritdoc}
      */
