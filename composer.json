@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "php": "^8.0",
+        "php": ">=7.3",
         "league/oauth2-client": "^2.0"
     },
     "require-dev": {
@@ -28,6 +28,5 @@
         "psr-4": {
             "Panfu\\OAuth2\\Client\\Test\\": "tests/src/"
         }
-    },
-    "minimum-stability": "stable"
+    }
 }
