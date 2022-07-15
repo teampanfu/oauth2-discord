@@ -15,7 +15,7 @@ class DiscordUser implements ResourceOwnerInterface
     protected $response;
 
     /**
-     * @param array $response
+     * @param  array  $response
      */
     public function __construct(array $response)
     {
@@ -25,7 +25,7 @@ class DiscordUser implements ResourceOwnerInterface
     /**
      * The user's banner color encoded as an integer representation of hexadecimal color code.
      *
-     * @return integer|null
+     * @return int|null
      */
     public function getAccentColor(): ?int
     {
@@ -36,6 +36,7 @@ class DiscordUser implements ResourceOwnerInterface
      * The user's avatar hash.
      *
      * @link   https://discord.com/developers/docs/reference#image-formatting
+     *
      * @return string|null
      */
     public function getAvatar(): ?string
@@ -47,6 +48,7 @@ class DiscordUser implements ResourceOwnerInterface
      * The user's banner hash.
      *
      * @link   https://discord.com/developers/docs/reference#image-formatting
+     *
      * @return string|null
      */
     public function getBanner(): ?string
@@ -57,7 +59,7 @@ class DiscordUser implements ResourceOwnerInterface
     /**
      * Whether the user belongs to an OAuth2 application.
      *
-     * @return boolean
+     * @return bool
      */
     public function getBot(): bool
     {
@@ -88,7 +90,8 @@ class DiscordUser implements ResourceOwnerInterface
      * The flags on a user's account
      *
      * @link   https://discord.com/developers/docs/resources/user#user-object-user-flags
-     * @return integer
+     *
+     * @return int
      */
     public function getFlags(): int
     {
@@ -109,6 +112,7 @@ class DiscordUser implements ResourceOwnerInterface
      * The user's chosen language option.
      *
      * @link   https://discord.com/developers/docs/reference#locales
+     *
      * @return string
      */
     public function getLocale(): string
@@ -120,7 +124,8 @@ class DiscordUser implements ResourceOwnerInterface
      * The public flags on a user's account
      *
      * @link   https://discord.com/developers/docs/resources/user#user-object-user-flags
-     * @return integer
+     *
+     * @return int
      */
     public function getPublicFlags(): int
     {
@@ -131,7 +136,8 @@ class DiscordUser implements ResourceOwnerInterface
      * The type of Nitro subscription on a user's account.
      *
      * @link   https://discord.com/developers/docs/resources/user#user-object-premium-types
-     * @return integer
+     *
+     * @return int
      */
     public function getPremiumType(): int
     {
@@ -141,7 +147,7 @@ class DiscordUser implements ResourceOwnerInterface
     /**
      * Wether the user is an Official Discord System user (part of the urgent message system).
      *
-     * @return boolean
+     * @return bool
      */
     public function getSystem(): bool
     {
@@ -151,7 +157,7 @@ class DiscordUser implements ResourceOwnerInterface
     /**
      * Whether the user has two factor enabled on their account.
      *
-     * @return boolean
+     * @return bool
      */
     public function getMfaEnabled(): bool
     {
@@ -171,7 +177,7 @@ class DiscordUser implements ResourceOwnerInterface
     /**
      * Whether the email on this account has been verified.
      *
-     * @return boolean
+     * @return bool
      */
     public function getVerified(): bool
     {
