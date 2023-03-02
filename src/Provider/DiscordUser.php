@@ -15,7 +15,7 @@ class DiscordUser implements ResourceOwnerInterface
     protected $response;
 
     /**
-     * @param  array  $response
+     * Create a new Discord user.
      */
     public function __construct(array $response)
     {
