@@ -24,8 +24,6 @@ class DiscordUser implements ResourceOwnerInterface
 
     /**
      * The user's banner color encoded as an integer representation of hexadecimal color code.
-     *
-     * @return int|null
      */
     public function getAccentColor(): ?int
     {
@@ -35,9 +33,7 @@ class DiscordUser implements ResourceOwnerInterface
     /**
      * The user's avatar hash.
      *
-     * @link   https://discord.com/developers/docs/reference#image-formatting
-     *
-     * @return string|null
+     * @link https://discord.com/developers/docs/reference#image-formatting
      */
     public function getAvatar(): ?string
     {
@@ -47,9 +43,7 @@ class DiscordUser implements ResourceOwnerInterface
     /**
      * The user's banner hash.
      *
-     * @link   https://discord.com/developers/docs/reference#image-formatting
-     *
-     * @return string|null
+     * @link https://discord.com/developers/docs/reference#image-formatting
      */
     public function getBanner(): ?string
     {
@@ -58,8 +52,6 @@ class DiscordUser implements ResourceOwnerInterface
 
     /**
      * Whether the user belongs to an OAuth2 application.
-     *
-     * @return bool
      */
     public function getBot(): bool
     {
@@ -68,8 +60,6 @@ class DiscordUser implements ResourceOwnerInterface
 
     /**
      * The user's 4-digit discord-tag.
-     *
-     * @return string
      */
     public function getDiscriminator(): string
     {
@@ -78,8 +68,6 @@ class DiscordUser implements ResourceOwnerInterface
 
     /**
      * The user's email.
-     *
-     * @return string|null
      */
     public function getEmail(): ?string
     {
@@ -89,9 +77,7 @@ class DiscordUser implements ResourceOwnerInterface
     /**
      * The flags on a user's account
      *
-     * @link   https://discord.com/developers/docs/resources/user#user-object-user-flags
-     *
-     * @return int
+     * @link https://discord.com/developers/docs/resources/user#user-object-user-flags
      */
     public function getFlags(): int
     {
@@ -100,8 +86,6 @@ class DiscordUser implements ResourceOwnerInterface
 
     /**
      * The user's id.
-     *
-     * @return string
      */
     public function getId(): string
     {
@@ -111,9 +95,7 @@ class DiscordUser implements ResourceOwnerInterface
     /**
      * The user's chosen language option.
      *
-     * @link   https://discord.com/developers/docs/reference#locales
-     *
-     * @return string
+     * @link https://discord.com/developers/docs/reference#locales
      */
     public function getLocale(): string
     {
@@ -123,9 +105,7 @@ class DiscordUser implements ResourceOwnerInterface
     /**
      * The public flags on a user's account
      *
-     * @link   https://discord.com/developers/docs/resources/user#user-object-user-flags
-     *
-     * @return int
+     * @link https://discord.com/developers/docs/resources/user#user-object-user-flags
      */
     public function getPublicFlags(): int
     {
@@ -135,9 +115,7 @@ class DiscordUser implements ResourceOwnerInterface
     /**
      * The type of Nitro subscription on a user's account.
      *
-     * @link   https://discord.com/developers/docs/resources/user#user-object-premium-types
-     *
-     * @return int
+     * @link https://discord.com/developers/docs/resources/user#user-object-premium-types
      */
     public function getPremiumType(): int
     {
@@ -146,8 +124,6 @@ class DiscordUser implements ResourceOwnerInterface
 
     /**
      * Wether the user is an Official Discord System user (part of the urgent message system).
-     *
-     * @return bool
      */
     public function getSystem(): bool
     {
@@ -156,8 +132,6 @@ class DiscordUser implements ResourceOwnerInterface
 
     /**
      * Whether the user has two factor enabled on their account.
-     *
-     * @return bool
      */
     public function getMfaEnabled(): bool
     {
@@ -166,8 +140,6 @@ class DiscordUser implements ResourceOwnerInterface
 
     /**
      * The user's username, not unique across the platform.
-     *
-     * @return string
      */
     public function getUsername(): string
     {
@@ -176,8 +148,6 @@ class DiscordUser implements ResourceOwnerInterface
 
     /**
      * Whether the email on this account has been verified.
-     *
-     * @return bool
      */
     public function getVerified(): bool
     {
@@ -186,8 +156,6 @@ class DiscordUser implements ResourceOwnerInterface
 
     /**
      * Returns the raw resource owner response.
-     *
-     * @return array
      */
     public function toArray(): array
     {
