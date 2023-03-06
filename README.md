@@ -1,19 +1,10 @@
 # Discord Provider for OAuth 2.0 Client
 
 [![Latest Version](https://img.shields.io/github/release/teampanfu/oauth2-discord.svg?style=flat-square)](https://github.com/teampanfu/oauth2-discord/releases)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Total Downloads](https://img.shields.io/packagist/dt/teampanfu/oauth2-discord.svg?style=flat-square)](https://packagist.org/packages/teampanfu/oauth2-discord)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
 This package provides Discord OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
-
-## Requirements
-
-The following versions of PHP are supported.
-
-- PHP 7.3
-- PHP 7.4
-- PHP 8.0
-- PHP 8.1
 
 ## Installation
 
@@ -162,23 +153,7 @@ $options = [
 $authUrl = $provider->getAuthorizationUrl($options);
 ```
 
-A list of [all available scopes](https://discord.com/developers/docs/topics/oauth2#shared-resources-oauth2-scopes) can be found in the documentation.
-
-### Refreshing a Token
-
-You can refresh an expired token with a refresh token instead of going through the entire process of obtaining a new token. To do this, simply use the expired token and request a refresh:
-
-```php
-$provider = new Discord(...);
-
-if ($existingAccessToken->hasExpired()) {
-    $newAccessToken = $provider->getAccessToken('refresh_token', [
-        'refresh_token' => $existingAccessToken->getRefreshToken(),
-    ]);
-
-    // Replace the expired token with the new one.
-}
-```
+A list of [all available scopes](https://discord.com/developers/docs/topics/oauth2#shared-resources-oauth2-scopes) can be found in the Discord API documentation.
 
 ### Client Credentials Grant
 
