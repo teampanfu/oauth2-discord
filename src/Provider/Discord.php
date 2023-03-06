@@ -16,16 +16,18 @@ class Discord extends AbstractProvider
     use BearerAuthorizationTrait;
 
     /**
+     * The endpoint to the Discord API.
+     *
      * @var string
      */
-    public $apiDomain = 'https://discord.com/api';
+    protected const BASE_API_URL = 'https://discord.com/api';
 
     /**
      * {@inheritdoc}
      */
     public function getBaseAuthorizationUrl(): string
     {
-        return $this->apiDomain.'/oauth2/authorize';
+        return self::BASE_API_URL.'/oauth2/authorize';
     }
 
     /**
@@ -33,7 +35,7 @@ class Discord extends AbstractProvider
      */
     public function getBaseAccessTokenUrl(array $params): string
     {
-        return $this->apiDomain.'/oauth2/token';
+        return self::BASE_API_URL.'/oauth2/token';
     }
 
     /**
@@ -41,7 +43,7 @@ class Discord extends AbstractProvider
      */
     public function getResourceOwnerDetailsUrl(AccessToken $token): string
     {
-        return $this->apiDomain.'/users/@me';
+        return self::BASE_API_URL.'/users/@me';
     }
 
     /**
