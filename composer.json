@@ -16,7 +16,7 @@
     },
     "require-dev": {
         "ext-json": "*",
-        "phpunit/phpunit": "^9.5",
+        "phpunit/phpunit": "^10.0",
         "mockery/mockery": "^1.5"
     },
     "autoload": {
