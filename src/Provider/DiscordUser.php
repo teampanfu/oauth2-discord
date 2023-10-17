@@ -41,6 +41,16 @@ class DiscordUser implements ResourceOwnerInterface
     }
 
     /**
+     * The user's avatar decoration hash.
+     *
+     * @link https://discord.com/developers/docs/reference#image-formatting
+     */
+    public function getAvatarDecoration(): ?string
+    {
+        return $this->getValueByKey($this->response, 'avatar_decoration');
+    }
+
+    /**
      * The user's banner hash.
      *
      * @link https://discord.com/developers/docs/reference#image-formatting
@@ -82,6 +92,14 @@ class DiscordUser implements ResourceOwnerInterface
     public function getFlags(): int
     {
         return $this->getValueByKey($this->response, 'flags');
+    }
+
+    /**
+     * The user's display name, if it is set. For bots, this is the application name.
+     */
+    public function getGlobalName(): ?string
+    {
+        return $this->getValueByKey($this->response, 'global_name');
     }
 
     /**
